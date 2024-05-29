@@ -84,7 +84,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: shubhamshinde2025/pbackend:latest
+        image: shubhamshinde2025/pbackend:v1
         ports:
         - containerPort: 5000
         env:
@@ -138,7 +138,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: shubhamshinde2025/pfrontend:latest
+        image: shubhamshinde2025/pfrontend:v1
         ports:
         - containerPort: 5173
         env:
