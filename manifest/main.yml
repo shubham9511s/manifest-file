@@ -6,7 +6,7 @@ metadata:
   name: vite
   namespace: vito-app
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: vite
