@@ -4,7 +4,7 @@ metadata:
   labels:
     app: vite
   name: vite
-  namespace: vito-app
+  namespace: node-app
 spec:
   ports:
   - port: 5173

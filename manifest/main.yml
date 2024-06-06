@@ -4,7 +4,7 @@ metadata:
   labels:
     app: vite
   name: vite
-  namespace: vito-app
+  namespace: node-app
 spec:
   replicas: 2
   selector:
@@ -17,7 +17,7 @@ spec:
         app: vite
     spec:
       containers:
-      - image:  shubhamshinde2025/ultimate-cicd:7
+      - image:  shubhamshinde2025/node-app:
         imagePullPolicy: Always
         name: vite
         ports:
