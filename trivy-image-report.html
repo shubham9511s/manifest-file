@@ -1,0 +1,45 @@
+
+shubhamshinde2025/node-app:12 (alpine 3.20.0)
+=============================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+
+app/node_modules/@esbuild/linux-x64/bin/esbuild (gobinary)
+==========================================================
+Total: 8 (UNKNOWN: 2, LOW: 0, MEDIUM: 5, HIGH: 1, CRITICAL: 0)
+
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬─────────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                            │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼─────────────────────────────────────────────────────────────┤
+│ stdlib  │ CVE-2023-45288 │ HIGH     │ fixed  │ 1.20.12           │ 1.21.9, 1.22.2  │ golang: net/http, x/net/http2: unlimited number of          │
+│         │                │          │        │                   │                 │ CONTINUATION frames causes DoS                              │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2023-45288                  │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│         │ CVE-2023-45289 │ MEDIUM   │        │                   │ 1.21.8, 1.22.1  │ golang: net/http/cookiejar: incorrect forwarding of         │
+│         │                │          │        │                   │                 │ sensitive headers and cookies on HTTP redirect...           │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2023-45289                  │
+│         ├────────────────┤          │        │                   │                 ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2023-45290 │          │        │                   │                 │ golang: net/http: memory exhaustion in                      │
+│         │                │          │        │                   │                 │ Request.ParseMultipartForm                                  │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2023-45290                  │
+│         ├────────────────┤          │        │                   │                 ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2024-24783 │          │        │                   │                 │ golang: crypto/x509: Verify panics on certificates with an  │
+│         │                │          │        │                   │                 │ unknown public key algorithm...                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-24783                  │
+│         ├────────────────┤          │        │                   │                 ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2024-24784 │          │        │                   │                 │ golang: net/mail: comments in display names are incorrectly │
+│         │                │          │        │                   │                 │ handled                                                     │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-24784                  │
+│         ├────────────────┤          │        │                   │                 ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2024-24785 │          │        │                   │                 │ golang: html/template: errors returned from MarshalJSON     │
+│         │                │          │        │                   │                 │ methods may break template escaping                         │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-24785                  │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│         │ CVE-2024-24789 │ UNKNOWN  │        │                   │ 1.21.11, 1.22.4 │ The archive/zip package's handling of certain types of      │
+│         │                │          │        │                   │                 │ invalid zip fil ......                                      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-24789                  │
+│         ├────────────────┤          │        │                   │                 ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2024-24790 │          │        │                   │                 │ The various Is methods (IsPrivate, IsLoopback, etc) did not │
+│         │                │          │        │                   │                 │ work as ex...                                               │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-24790                  │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴─────────────────────────────────────────────────────────────┘
