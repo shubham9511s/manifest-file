@@ -17,7 +17,7 @@ spec:
         app: vite
     spec:
       containers:
-      - image:  shubhamshinde2025/node-app:3
+      - image:  shubhamshinde2206/node-app:3
         imagePullPolicy: Always
         name: vite
         ports:
