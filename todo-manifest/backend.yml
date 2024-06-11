@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: shubhamshinde2025/threebackend:v9
+        image: shubhamshinde2025/threebackend:v10
         ports:
         - containerPort: 5000
 ---
