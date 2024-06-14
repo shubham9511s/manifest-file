@@ -6,10 +6,10 @@ metadata:
   name: vite
   namespace: node-app
 spec:
+  type: LoadBalancer
   ports:
   - port: 5173
     protocol: TCP
     targetPort: 5173
   selector:
     app: vite 
-  type: NodePort
