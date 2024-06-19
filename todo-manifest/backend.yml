@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: shubhamshinde2206/todobackend:1
+        image: shubhamshinde2206/todobackend:3
         ports:
         - containerPort: 5000
 ---
