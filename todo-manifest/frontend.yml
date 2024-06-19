@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: shubhamshinde2025/threefrontend:v11
+        image: shubhamshinde2025/threefrontend:v12
         ports:
         - containerPort: 5173
 
@@ -30,8 +30,7 @@ metadata:
 spec:
   selector:
     app: frontend
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - port: 3000
-      targetPort: 3000
       protocol: TCP
