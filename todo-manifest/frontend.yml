@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: shubhamshinde2025/threefrontend:v12
+        image: shubhamshinde2025/threefrontend:v13
         ports:
         - containerPort: 3000
 
