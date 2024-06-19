@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: shubhamshinde2206/todofrontend:5
+        image: shubhamshinde2206/todofrontend:6
         ports:
         - containerPort: 3000
 
