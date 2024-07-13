@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: shubhamshinde2025/curd-frontend:v1
+        image: shubhamshinde2025/curd-frontend:v2
         ports:
         - containerPort: 5173
 
