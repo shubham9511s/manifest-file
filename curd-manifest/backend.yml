@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: shubhamshinde2025/curd-backend:v1
+        image: shubhamshinde2206/mren-backend:latest
         ports:
         - containerPort: 5000
 ---
