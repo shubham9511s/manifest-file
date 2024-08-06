@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: shubhamshinde2025/curd-frontend:v2
+        image: shubhamshinde2206/mren-frontend:v1
         ports:
         - containerPort: 5173
 
@@ -35,4 +35,5 @@ spec:
   type: ClusterIP
   ports:
     - port: 5173
+      targetPort: 80
       protocol: TCP
