@@ -6,7 +6,7 @@ metadata:
   name: vite
   namespace: node-app
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: vite
