@@ -1,0 +1,89 @@
+#secret
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-notifications-secret
+  namespace: argocd
+  labels:
+    argocd-notifications.argoproj.io/secret: ""
+type: Opaque
+stringData:
+  email-password: rocf zsku ijen pgwz
+
+
+---
+
+#configMap
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-notifications-cm
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd-notifications-cm
+    argocd-notifications.argoproj.io/config: ""
+data:
+  config.yaml: |
+    context:
+      - name: default
+        email: shubham.ssc100@gmail.com
+
+    service.email:
+      host: smtp.example.com
+      port: 587
+      from: no-reply@example.com
+      username: shubham.ssc100@gmail.com
+      password: $email-password
+
+    template:
+      app-deployed: |
+        to: ${{email}}
+        subject: Application {{app.metadata.name}} Deployed
+        body: |
+          Application **{{app.metadata.name}}** is successfully deployed.
+
+          **Status**: {{app.status.health.status}}
+          **Sync Status**: {{app.status.sync.status}}
+          **Repository**: {{app.spec.source.repoURL}}
+          **Target Revision**: {{app.spec.source.targetRevision}}
+          **Path**: {{app.spec.source.path}}
+
+          **Resources**:
+          {{range $r := app.status.resources}}
+          - **{{$r.kind}}/{{$r.name}}**: {{$r.status}}
+          {{end}}
+
+          **Conditions**:
+          {{range $c := app.status.conditions}}
+          - **{{$c.type}}**: {{$c.message}}
+          {{end}}
+
+          **URL**: {{app.status.operationState.phase}}
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-notifications-trigger
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd-notifications-trigger
+    argocd-notifications.argoproj.io/config: ""
+data:
+  config.yaml: |
+    trigger.on-deployed: |
+      - name: on-deployed
+        enabled: true
+        condition: app.status.operationState.phase == 'Succeeded'
+        template: app-deployed
+
+    subscription:
+      - recipients:
+          - email: shubham.ssc100@gmail.com
+        triggers:
+          - on-deployed
+
+
+
