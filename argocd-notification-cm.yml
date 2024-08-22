@@ -26,16 +26,15 @@ metadata:
     argocd-notifications.argoproj.io/config: ""
 data:
   config.yaml: |
-    context:
-      - name: default
-        email: shubham.ssc100@gmail.com
-
     service.email:
-      host: smtp.example.com
-      port: 587
+      host: smtp.gmail.com
+      port: 465
       from: no-reply@example.com
       username: shubham.ssc100@gmail.com
       password: $email-password
+    context:
+      email: shubham.ssc100@gmail.com
+  
 
     template:
       app-deployed: |
